@@ -24,7 +24,7 @@ function Banner() {
           src={`https://image.tmdb.org/t/p/original/${movie?.backdrop_path}`}
           alt={movie?.title}
         />
-    <div className="absolute  w-full top-[30%] space-y-6 p-4 md:p-8">
+    <div className="absolute  w-full top-[30%] mb-3 p-4 md:p-8">
         <h1 className="text-red-600 w-full md:max-w-[70%] lg:max-w-[50%] xl:max-w-[35%] text-3xl md:text-5xl font-bold">
             {movie?.title || movie?.original_title || movie?.name}
             </h1>
