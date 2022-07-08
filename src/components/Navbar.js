@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Avatar  } from 'web3uikit'
-import { BiChevronDown } from 'react-icons/bi'
+import { BiChevronDown } from 'react-icons/bi';
 
 
 
