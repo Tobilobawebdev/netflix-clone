@@ -22,7 +22,7 @@ const [textColor, setTextColor] = useState('#0000ff')
    window.addEventListener('scroll', handleScroll);
   }, []);
 
-  return  <div style={{ backgroundColor: `${isScroll}` }} className="justify-between flex lg:fixed bg-transparent w-full items-center p-3 z-[100]">
+  return  <div style={{ backgroundColor: `${isScroll}` }} className="justify-between flex fixed bg-transparent w-full items-center p-3 z-[100]">
     <h1 style={{ color: `${textColor}` }} className="text-blue-600 font-bold text-xl lg:text-2xl">NETFLIX</h1>
   {/* middle navigation menu */}
     <div className="text-sm hidden lg:flex space-x-6 pr-6 ">

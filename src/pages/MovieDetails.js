@@ -6,15 +6,15 @@ import { StarIcon } from '@heroicons/react/solid'
 
 const MovieDetails = () => {
   const [movie, setMovie] = useState({})
-  const params = useParams()
+  const {movieId} =  useParams()
 
-  const url = `https://api.themoviedb.org/3/movie/${params.movieId}?api_key=8d4fbe03b6c5ab92b91776b7cc982e2d&language=en-US`
+  const url = `https://api.themoviedb.org/3/movie/${movieId}?api_key=8d4fbe03b6c5ab92b91776b7cc982e2d&language=en-US`
 
   useEffect(() => {
     axios.get(url).then((response) => {
-      setMovie(response.data)
+      setMovie(response.data.results)
     }).catch((error) => {
-      console.log(error.response)
+      console.log(error)
     })
   }, [url])
 console.log(movie)

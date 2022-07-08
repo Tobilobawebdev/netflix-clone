@@ -14,17 +14,22 @@ function Banner() {
       setMovies(response.data.results);
     });
   }, []);
-  //console.log(movie);
+  console.log(movie);
 
   return <div className="w-full relative h-[700px]">
    <div className="w-full h-full">
-    <div className="w-full h-[700px] absolute bg-gradient-to-r from-black"></div>
+    <div className="w-full h-[700px] hidden lg:block absolute bg-gradient-to-r from-black"></div>
    <img
-          className='w-full h-full md:opacity-25 object-cover'
+          className='hidden lg:block w-full h-full md:opacity-25 object-cover'
           src={`https://image.tmdb.org/t/p/original/${movie?.backdrop_path}`}
           alt={movie?.title}
         />
-    <div className="absolute  w-full top-[30%] mb-3 p-4 md:p-8">
+        <img
+          className='lg:hidden w-full h-full  object-cover'
+          src={`https://image.tmdb.org/t/p/original/${movie?.poster_path}`}
+          alt={movie?.title}
+        />
+    <div className="absolute hidden lg:grid   w-full top-[30%] mb-3 p-4 md:p-8">
         <h1 className="text-blue-600 w-full md:max-w-[70%] lg:max-w-[50%] xl:max-w-[35%] text-3xl md:text-5xl font-bold">
             {movie?.title || movie?.original_title || movie?.name}
             </h1>
