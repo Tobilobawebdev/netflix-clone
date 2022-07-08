@@ -13,11 +13,9 @@ const MovieDetails = () => {
   useEffect(() => {
     axios.get(url).then((response) => {
       setMovie(response.data.results)
-    }).catch((error) => {
-      console.log(error);
-    })
-  }, [url])
-console.log(movie);
+    });
+  }, [url]);
+//console.log(movie);
 
   return <div>
     <div className="w-full h-[400px]">

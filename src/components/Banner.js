@@ -14,7 +14,7 @@ function Banner() {
       setMovies(response.data.results);
     });
   }, []);
-  console.log(movie);
+  //console.log(movie);
 
   return <div className="w-full relative h-[700px]">
    <div className="w-full h-full">

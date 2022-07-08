@@ -11,7 +11,6 @@ root.render(
     <MoralisProvider appId="jM4svLVTiFMy8AYRDt6ygGcKli2zTuSzdq4fhqW0" serverUrl="https://on2vacs0upz1.usemoralis.com:2053/server">
         <App />
     </MoralisProvider>
-    
   </React.StrictMode>
 );
 
