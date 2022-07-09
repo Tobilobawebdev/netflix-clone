@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { BiChevronDown } from 'react-icons/bi';
+import { MdCastConnected } from 'react-icons/md';
 
 function Navbar() {
   const [isScroll, setIsScroll] = useState('transparent');
@@ -35,7 +36,8 @@ function Navbar() {
 
       {/*  navigation profile section */}
       <div className="flex space-x-4 items-center">
-        <button type="button" className="bg-white rounded-full max-w-md text-blue-600 text-sm font-bold py-2 px-3">Connect Wallet</button>
+        <MdCastConnected size={30} />
+        <button type="button" className="bg-white rounded-full max-w-md text-blue-600 text-sm font-bold py-2 px-3">Sign up</button>
       </div>
     </div>
   );

@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  @apply bg-black text-white;
+  @apply bg-black text-white !scrollbar !scrollbar-thin !scrollbar-thumb-blue-900 !scrollbar-track-black;
 }
 
 .navblack{

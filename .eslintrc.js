@@ -32,6 +32,8 @@ module.exports = {
     'import/no-named-as-default-member': 0,
     'no-unused-vars': 0,
     'react/react-in-jsx-scope': 0,
+    'import/no-extraneous-dependencies': 0,
+    'global-require': 0,
     'max-len': [
       2,
       250,

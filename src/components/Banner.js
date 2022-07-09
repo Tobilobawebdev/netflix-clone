@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { AiOutlinePlayCircle, AiOutlinePlus, AiOutlineInfoCircle } from 'react-icons/ai';
+import { Button, Stack } from '@chakra-ui/react';
 import { StarIcon } from '@heroicons/react/solid';
 import requests from '../utils/requests';
 
@@ -18,7 +19,7 @@ function Banner() {
   return (
     <div className="w-full relative h-[700px]">
       <div className="w-full h-full">
-        <div className="w-full h-[700px] hidden lg:block absolute bg-gradient-to-r from-black" />
+        <div className="w-full h-[700px] absolute bg-gradient-to-r from-black" />
         <img
           className="hidden lg:block w-full h-full md:opacity-25 object-cover"
           src={`https://image.tmdb.org/t/p/original/${movie?.backdrop_path}`}
@@ -48,19 +49,12 @@ function Banner() {
         </div>
       </div>
       {/* mobileview */}
-      <div className="text-blue-600 ">
-        <h1 className="flex items-center px-3 bg-blue-800">
-          <AiOutlinePlayCircle size={25} />
-          Play
-        </h1>
-        <h1 className="flex-col items-center px-3 border-2 border-blue-800">
-          <AiOutlinePlus size={25} />
-          List
-        </h1>
-        <h1 className="flex-col items-center px-3 border-2 border-blue-800">
-          <AiOutlineInfoCircle size={25} />
-          List
-        </h1>
+      <div>
+        <div className=" flex items-center justify-around m-3 lg:hidden p-4">
+          <button type="button" className="flex-col ml-3 font-bold"><AiOutlinePlus size={25} /> List</button>
+          <button type="button" className="flex bg-white ml-3 mr-3 text-black px-12 items-center font-bold text-lg"><AiOutlinePlayCircle /> Play </button>
+          <button type="button" className="flex-col mr-3 font-bold"><AiOutlineInfoCircle size={25} /> Info</button>
+        </div>
       </div>
       {/* mobileview end */}
       <img
