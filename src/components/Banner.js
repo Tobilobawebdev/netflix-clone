@@ -19,7 +19,7 @@ function Banner() {
   return (
     <div className="w-full relative h-[700px]">
       <div className="w-full h-full">
-        <div className="w-full h-[700px] absolute g-gradient-to-t from-black z-[20] bottom-0" />
+        <div className="w-full h-[700px] absolute bg-gradient-to-t from-black to-transparent z-[20] bottom-0" />
         <img
           className="hidden lg:block w-full h-full md:opacity-25 object-cover"
           src={`https://image.tmdb.org/t/p/original/${movie?.backdrop_path}`}
@@ -48,15 +48,6 @@ function Banner() {
           </div>
         </div>
       </div>
-      {/* mobileview */}
-      <div>
-        <div className=" flex items-center absolute ml-6 bottom-0 space-x-12 justify-center lg:hidden p-4">
-          <button type="button" className="flex-col ml-3 font-bold"><AiOutlinePlus size={25} /> List</button>
-          <button type="button" className="flex bg-white ml-3 mr-3 text-black px-12 items-center font-bold text-lg"><AiOutlinePlayCircle /> Play </button>
-          <button type="button" className="flex-col mr-3 font-bold"><AiOutlineInfoCircle size={25} /> Info</button>
-        </div>
-      </div>
-      {/* mobileview end */}
       <img
         className="w-[30%] rounded-lg shadow-2xl shadow-gray-600 h-[80%] hidden lg:block absolute top-[10%] left-[60%] object-cover"
         src={`https://image.tmdb.org/t/p/original/${movie?.poster_path}`}

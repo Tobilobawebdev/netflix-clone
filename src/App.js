@@ -6,6 +6,7 @@ import SignUp from './pages/SignUp';
 import SignIn from './pages/SignIn';
 import Downloads from './pages/Downloads';
 import Search from './pages/Search';
+import MovieDetails from './pages/MovieDetails';
 
 function App() {
   return (
@@ -15,10 +16,8 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/" element={<SignUp />} />
-          <Route path="/" element={<SignIn />} />
-          <Route path="/" element={<Downloads />} />
-          <Route path="/" element={<Search />} />
+          <Route path="/movie/:id" element={<MovieDetails />} />
+          <Route path="/signup" element={<SignUp/>} />
         </Routes>
       </Router>
     </div>
