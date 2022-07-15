@@ -5,16 +5,16 @@ import { Link } from 'react-router-dom';
 
 function Navbar() {
   const [isScroll, setIsScroll] = useState('transparent');
-  const [textColor, setTextColor] = useState('#0000ff');
+  const [textColor, setTextColor] = useState('#ff0000');
 
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY >= 90) {
-        setIsScroll('#0000cd');
-        setTextColor('#f0ffff');
+        setIsScroll('#ff0000');
+        setTextColor('#ffffff');
       } else {
         setIsScroll('transparent');
-        setTextColor('#0000ff');
+        setTextColor('#ff0000');
       }
     };
     window.addEventListener('scroll', handleScroll);
@@ -22,7 +22,7 @@ function Navbar() {
 
   return (
     <div style={{ backgroundColor: `${isScroll}` }} className="justify-between flex fixed bg-transparent w-full items-center pl-3 z-[100]">
-      <h1 style={{ color: `${textColor}` }} className="text-blue-600 font-black text-2xl lg:text-3xl">N</h1>
+      <h1 style={{ color: `${textColor}` }} className="text-red-600 font-black text-2xl lg:text-3xl">N</h1>
       {/* middle navigation menu */}
       <div className="text-sm hidden lg:flex space-x-6 pr-6 ">
         <p className="hover:text-blue-600">Tv shows</p>
