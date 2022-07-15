@@ -15,11 +15,9 @@ function Row({ title, rowID, fetchURL }) {
   return (
     <div className="mt-6">
       <h1 className="font-bold md:text-2xl text-xl m-3">{title}</h1>
-      <div className="flex">
+      <div className="flex tailwind-scrollbar-hide">
         {movies.map((movie) => (
-          <Link to={`/movie/${movie.id}`} key={movie.id}>
-            <Movies movie={movie} />
-          </Link>
+          <Movies movie={movie} key={movie.id} />
         ))}
       </div>
     </div>

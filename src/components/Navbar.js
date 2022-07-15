@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { BiChevronDown } from 'react-icons/bi';
 import { MdCastConnected } from 'react-icons/md';
+import { Link } from 'react-router-dom';
 
 function Navbar() {
   const [isScroll, setIsScroll] = useState('transparent');
@@ -37,7 +38,9 @@ function Navbar() {
       {/*  navigation profile section */}
       <div className="flex space-x-4 items-center">
         <MdCastConnected size={20} />
-        <button type="button" className="bg-white rounded-full max-w-md text-blue-600 text-sm font-bold px-5">Sign up</button>
+        <Link to="/signup">
+          <button type="button" className="bg-white rounded-full max-w-md text-blue-600 text-sm font-bold px-5">Sign up</button>
+        </Link>
       </div>
     </div>
   );

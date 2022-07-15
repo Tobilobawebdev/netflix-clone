@@ -13,7 +13,7 @@ function Home() {
         <button className="text-white font-bold flex items-center bg-blue-600 px-5 py-2" type="button"><AiOutlinePlayCircle size={25} /> play</button>
         <button className="flex-col px-4" type="button"><AiOutlinePlus size={25} /> MyList</button>
       </div>
-      <div className="px-3">
+      <div className="">
         <Row rowID="1" title="Trending" fetchURL={requests.fetchTrending} />
       </div>
       <div>
@@ -23,7 +23,7 @@ function Home() {
         <Row rowID="2" title="Only on Netflix" fetchURL={requests.fetchNetflixOriginals} />
       </div>
 
-      <div className="px-3">
+      <div className="">
         <Row rowID="4" title="Get in on the Action" fetchURL={requests.fetchActionMovies} />
       </div>
       <div>
