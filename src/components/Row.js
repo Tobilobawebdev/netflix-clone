@@ -15,21 +15,21 @@ function Row({ title, rowID, fetchURL }) {
 
   const slideLeft = () => {
     const slider = document.getElementById(`slider${rowID}`);
-    slider.scrollbarLeft = slider.scrollLeft - 500;
+    slider.scrollLeft -= 500;
   };
 
   const slideRight = () => {
     const slider = document.getElementById(`slider${rowID}`);
-    slider.scrollbarLeft = slider.scrollLeft + 500;
+    slider.scrollLeft += 500;
   };
 
   return (
-    <div className="mt-6">
+    <>
       <h1 className="font-bold md:text-2xl text-xl m-3">{title}</h1>
-      <div className="relative items-center group">
+      <div className="relative flex items-center group">
         <MdChevronLeft
           onClick={slideLeft}
-          size={20}
+          size={40}
           className="bg-white text-blue-600 left-0 rounded-full absolute hover:opacity-100 cursor=pointer z-10 hidden group-hover:block"
         />
         <div
@@ -42,11 +42,11 @@ function Row({ title, rowID, fetchURL }) {
         </div>
         <MdChevronRight
           onClick={slideRight}
-          size={20}
+          size={40}
           className="bg-white text-blue-600 right-0 rounded-full absolute hover:opacity-100 cursor=pointer z-10 hidden group-hover:block"
         />
       </div>
-    </div>
+    </>
   );
 }
 
