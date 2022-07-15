@@ -39,7 +39,7 @@ function Navbar() {
       <div className="flex space-x-4 items-center">
         <MdCastConnected size={20} />
         <Link to="/signup">
-          <button type="button" className="bg-white rounded-full max-w-md text-blue-600 text-sm font-bold px-5">Sign up</button>
+          <button type="button" className="bg-white rounded-full max-w-md text-red-600 text-sm font-bold px-5">Sign up</button>
         </Link>
       </div>
     </div>

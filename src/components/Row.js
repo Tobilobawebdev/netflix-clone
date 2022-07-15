@@ -30,11 +30,11 @@ function Row({ title, rowID, fetchURL }) {
         <MdChevronLeft
           onClick={slideLeft}
           size={40}
-          className="bg-white text-blue-600 left-0 rounded-full absolute hover:opacity-100 cursor=pointer z-10 hidden group-hover:block"
+          className="bg-white text-red-600 left-0 rounded-full absolute hover:opacity-100 cursor=pointer z-10 hidden group-hover:block"
         />
         <div
           id={`slider${rowID}`}
-          className="flex scrollbar-hide  w-full h-full relative scroll-smooth whitespace-nowrap"
+          className="flex scrollbar-hide overflow-y-hidden w-full h-full relative scroll-smooth whitespace-nowrap"
         >
           {movies.map((movie) => (
             <Movies movie={movie} key={movie.id} />
@@ -43,7 +43,7 @@ function Row({ title, rowID, fetchURL }) {
         <MdChevronRight
           onClick={slideRight}
           size={40}
-          className="bg-white text-blue-600 right-0 rounded-full absolute hover:opacity-100 cursor=pointer z-10 hidden group-hover:block"
+          className="bg-white text-red-600 right-0 rounded-full absolute hover:opacity-100 cursor=pointer z-10 hidden group-hover:block"
         />
       </div>
     </>
