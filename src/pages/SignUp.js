@@ -13,11 +13,23 @@ function SignUp() {
           <div className="max-w-[450px] h-[600px] mx-auto bg-black/75 text-white">
             <div className="max-w-[320px] mx-auto py-16">
               <h1 className="text-3xl font-bold">SignUp</h1>
-              <form>
-                <input type="Email" />
-                <input type="password" />
-                <input type="confirm password" />
+              <form className="w-full flex flex-col py-4">
+                <input className="p-3 my-2 bg-gray-700 rounded" type="Email" />
+                <input className="p-3 my-2 bg-gray-700 rounded" type="password" />
+                <input className="p-3 my-2 bg-gray-700 rounded" type="confirm password" />
+                <button type="submit" className="bg-red-600 px-8 font-bld w-full py-3">Sign In</button>
+                <div className="flex mx-auto">
+                  <div className="flex">
+                    <input type="checkbox" className="bg-gray-700 text-black my-2" />
+                    <p className="text-gray-700">Remember me</p>
+                  </div>
+                  <p className="text-gray-700 ml-12">Need help?</p>
+                </div>
               </form>
+              <p className="mt-8 text-gray-700">Got an account
+                <p className="text-white">Sign in now</p>
+              </p>
+              <p className="mt-2 text-gray-700">This page is protected by GOOGLE reCAPTCHA to ensure youre not a bot.<p className="text-blue-600">Learn More</p></p>
             </div>
           </div>
         </div>
