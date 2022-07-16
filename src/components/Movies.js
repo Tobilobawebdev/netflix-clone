@@ -5,9 +5,9 @@ import { FaRegHeart } from 'react-icons/fa';
 function Movies({ movie }) {
   const [like, setLike] = useState(false);
   return (
-    <div className="pl-6 relative w-[350px] transition-all duration-100 delay-300 ease-in-out hover:scale-125 ">
+    <div className="pl-6 relative w-[350px]">
       <img
-        className="max-w-[120px] h-[150px] block object-cover hover:border-2 rounded-br-lg rounded-tl-lg hover:border-white hover:border-bold"
+        className="max-w-[210px] h-[250px] block object-cover  rounded-br-lg rounded-tl-lg"
         src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`}
         alt={movie.title}
       />

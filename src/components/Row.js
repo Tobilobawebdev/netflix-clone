@@ -34,7 +34,7 @@ function Row({ title, rowID, fetchURL }) {
         />
         <div
           id={`slider${rowID}`}
-          className="flex scrollbar-hide  w-full h-full relative scroll-smooth whitespace-nowrap"
+          className="flex scrollbar-hide overflow-y-hidden w-full h-full relative scroll-smooth whitespace-nowrap"
         >
           {movies.map((movie) => (
             <Movies movie={movie} key={movie.id} />

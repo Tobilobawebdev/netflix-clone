@@ -22,7 +22,10 @@ function Navbar() {
 
   return (
     <div style={{ backgroundColor: `${isScroll}` }} className="justify-between flex fixed bg-transparent w-full items-center pl-3 z-[100]">
-      <h1 style={{ color: `${textColor}` }} className="text-red-600 font-black text-2xl lg:text-3xl">N</h1>
+      <Link to="/">
+        <h1 style={{ color: `${textColor}` }} className="text-red-600 font-black text-4xl lg:text-3xl">N</h1>
+      </Link>
+
       {/* middle navigation menu */}
       <div className="text-sm hidden lg:flex space-x-6 pr-6 ">
         <p className="hover:text-blue-600">Tv shows</p>
@@ -39,7 +42,7 @@ function Navbar() {
       <div className="flex space-x-4 items-center">
         <MdCastConnected size={20} />
         <Link to="/signup">
-          <button type="button" className="bg-white rounded-full max-w-md text-blue-600 text-sm font-bold px-5">Sign up</button>
+          <button type="button" className="bg-white rounded-full max-w-md text-red-600 text-sm font-bold px-5">Sign up</button>
         </Link>
       </div>
     </div>
