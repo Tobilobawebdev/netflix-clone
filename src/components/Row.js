@@ -30,7 +30,7 @@ function Row({ title, rowID, fetchURL }) {
         <MdChevronLeft
           onClick={slideLeft}
           size={40}
-          className="bg-white text-blue-600 left-0 rounded-full absolute hover:opacity-100 cursor=pointer z-10 hidden group-hover:block"
+          className="bg-white text-red-600 left-0 rounded-full absolute hover:opacity-100 cursor=pointer z-10 hidden group-hover:block"
         />
         <div
           id={`slider${rowID}`}
@@ -43,7 +43,7 @@ function Row({ title, rowID, fetchURL }) {
         <MdChevronRight
           onClick={slideRight}
           size={40}
-          className="bg-white text-blue-600 right-0 rounded-full absolute hover:opacity-100 cursor=pointer z-10 hidden group-hover:block"
+          className="bg-white text-red-600 right-0 rounded-full absolute hover:opacity-100 cursor=pointer z-10 hidden group-hover:block"
         />
       </div>
     </>
