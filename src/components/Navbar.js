@@ -1,11 +1,24 @@
 import React, { useEffect, useState } from 'react';
 import { BiChevronDown } from 'react-icons/bi';
 import { MdCastConnected } from 'react-icons/md';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { UserAuth } from '../utils/AuthContext';
 
 function Navbar() {
+  const { user, logOut } = UserAuth();
   const [isScroll, setIsScroll] = useState('transparent');
   const [textColor, setTextColor] = useState('#ff0000');
+  const navigate = useNavigate();
+  // console.log(user.email)
+
+  const handleLogout = async () => {
+    try {
+      await logOut();
+      navigate('/');
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -39,12 +52,31 @@ function Navbar() {
       {/* middle navigation menu end */}
 
       {/*  navigation profile section */}
-      <div className="flex space-x-4 items-center">
-        <MdCastConnected size={20} />
-        <Link to="/signup">
-          <button type="button" className="bg-white rounded-full max-w-md text-red-600 text-sm font-bold px-5">Sign up</button>
-        </Link>
-      </div>
+      {user?.email ? (
+        <div>
+          <Link to="/account">
+            <button type="button" className="text-white pr-4">Account</button>
+          </Link>
+          <button
+            type="button"
+            onClick={handleLogout}
+            className="bg-red-600 px-6 py-2 rounded cursor-pointer text-white"
+          >
+            Logout
+          </button>
+        </div>
+      ) : (
+        <div>
+          <Link to="/signin">
+            <button type="button" className="text-white pr-4">Sign In</button>
+          </Link>
+          <Link to="/signup">
+            <button type="button" className="bg-red-600 px-6 py-2 rounded cursor-pointer text-white">
+              Sign Up
+            </button>
+          </Link>
+        </div>
+      )}
     </div>
   );
 }
