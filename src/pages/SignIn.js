@@ -16,7 +16,6 @@ function SignIn() {
       await logIn(email, password);
       navigate('/');
     } catch (error) {
-      console.log(error);
       setError(error.message);
     }
   };
