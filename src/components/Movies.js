@@ -5,7 +5,6 @@ import { FaRegHeart } from 'react-icons/fa';
 import { db } from '../firebase';
 import { UserAuth } from '../utils/AuthContext';
 
-
 function Movies({ movie }) {
   const [like, setLike] = useState(false);
   const [saved, setSaved] = useState(false);
@@ -14,17 +13,17 @@ function Movies({ movie }) {
   const movieID = doc(db, 'user', `${user?.email}`);
 
   const saveShow = async () => {
-    if(user?.email) {
+    if (user?.email) {
       setLike(!like);
       setSaved(true);
       await updateDoc(movieID, {
         savedShows: arrayUnion({
-           id: item.id,
-           title: item.title,
-           img: item.poster_path,
+          id: movie.id,
+          title: movie.title,
+          img: movie.poster_path,
         }),
-      }),
-    }else {
+      });
+    } else {
       alert('log in first pls');
     }
   };
