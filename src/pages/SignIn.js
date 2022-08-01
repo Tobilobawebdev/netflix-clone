@@ -14,7 +14,6 @@ function SignIn() {
     setError('');
     try {
       await logIn(email, password);
-      navigate('/');
     } catch (error) {
       setError(error.message);
     }
