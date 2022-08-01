@@ -33,8 +33,9 @@ function Loader() {
       }}
       className="w-[100vw] scrollbar-hide h-[100vh] overflow-hidden absolute top-0 left-0 right-0 bottom-0 justify-center items-center z-50 bg-black"
     >
-      <div
-        className="flex-row flex  text-center md:text-6xl text-2xl ml-[40%] mt-[20%] font-bold text-red-600 "
+      <motion.div
+        variants={item}
+        className="flex-row flex  text-center md:text-6xl text-4xl mt-[30%] mx-auto ml-[40%] mt-[20%] font-bold text-red-600 "
       >
         <h1>N</h1>
         <motion.h1
@@ -67,7 +68,7 @@ function Loader() {
           initial="hidden"
           animate="show"
         >X</motion.h1>
-      </div>
+      </motion.div>
     </motion.div>
   );
 }
