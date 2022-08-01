@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { AiFillHeart } from 'react-icons/ai';
 import { arrayUnion, doc, updateDoc } from 'firebase/firestore';
 import { FaRegHeart } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 import { db } from '../firebase';
 import { UserAuth } from '../utils/AuthContext';
 
@@ -24,13 +25,13 @@ function Movies({ movie }) {
         }),
       });
     } else {
-      alert('log in first pls');
+      alert('pls login first');
     }
   };
   return (
-    <div className="pl-6 relative w-[350px] ">
+    <div className="pl-6 relative w-[250px] ">
       <img
-        className="max-w-[220px] h-[270px] block object-cover rounded-br-lg rounded-tl-lg"
+        className="max-w-[120px] h-[200px] block object-cover rounded-br-lg rounded-tl-lg"
         src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`}
         alt={movie.title}
       />

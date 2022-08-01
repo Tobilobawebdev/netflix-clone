@@ -31,6 +31,7 @@ function SignIn() {
       <div className="fixed w-full px-4 py-24 z-50">
         <div className="max-w-[450px] h-[600px] mx-auto bg-black/75 text-white">
           <div className="max-w-[320px] mx-auto py-16">
+            <h1 className="text-4xl mb-6 text-center text-red-600 font-bold">NETFLIX</h1>
             <h1 className="text-3xl font-bold">Sign In</h1>
             {error ? <p className="p-3 bg-red-400 my-2">{error}</p> : null}
             <form onSubmit={handleSubmit} className="w-full flex flex-col py-4">
@@ -59,7 +60,7 @@ function SignIn() {
                 <p>Need Help?</p>
               </div>
               <p className="py-8">
-                <span className="text-gray-600">New to Netflix?</span>{' '}
+                <span className="text-gray-600">New to Netflix?</span>
                 <Link to="/signup">Sign Up</Link>
               </p>
             </form>

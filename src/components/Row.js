@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { MdChevronLeft, MdChevronRight } from 'react-icons/md';
-import { Link } from 'react-router-dom';
 import Movies from './Movies';
 
 function Row({ title, rowID, fetchURL }) {
@@ -36,7 +35,7 @@ function Row({ title, rowID, fetchURL }) {
           id={`slider${rowID}`}
           className="flex scrollbar-hide overflow-y-hidden w-full h-full relative scroll-smooth whitespace-nowrap"
         >
-          {movies.map((movie) => (
+          {movies.map((movie, id) => (
             <Movies movie={movie} key={movie.id} />
           ))}
         </div>

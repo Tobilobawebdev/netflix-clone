@@ -12,9 +12,9 @@ function SignUp() {
     e.preventDefault();
     try {
       await signUp(email, password);
-      navigate('/');
+      navigate('/', { replace: true });
     } catch (error) {
-      console.log(error);
+      console.log(error.message);
     }
   };
 
@@ -29,6 +29,7 @@ function SignUp() {
       <div className="fixed w-full px-4 py-24 z-50">
         <div className="max-w-[450px] h-[600px] mx-auto bg-black/75 text-white">
           <div className="max-w-[320px] mx-auto py-16">
+            <h1 className="text-4xl mb-6 text-center text-red-600 font-bold">NETFLIX</h1>
             <h1 className="text-3xl font-bold">Sign Up</h1>
             <form
               onSubmit={handleSubmit}
@@ -61,7 +62,7 @@ function SignUp() {
               <p className="py-8">
                 <span className="text-gray-600">
                   Already subscribed to Netflix?
-                </span>{' '}
+                </span>
                 <Link to="/login">Sign In</Link>
               </p>
             </form>

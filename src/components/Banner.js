@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { AiOutlinePlayCircle, AiOutlinePlus, AiOutlineInfoCircle } from 'react-icons/ai';
-import { Button, Stack } from '@chakra-ui/react';
 import { StarIcon } from '@heroicons/react/solid';
 import requests from '../utils/requests';
 
