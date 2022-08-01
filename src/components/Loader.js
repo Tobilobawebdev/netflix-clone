@@ -13,7 +13,7 @@ const item = {
     translateY: 0,
   },
   transition: {
-    duration: 0.3,
+    duration: 1.3,
     delay: 0.5,
   },
 };
@@ -35,7 +35,7 @@ function Loader() {
     >
       <motion.div
         variants={item}
-        className="flex-row flex  text-center md:text-6xl text-4xl mt-[30%] mx-auto ml-[40%] mt-[20%] font-bold text-red-600 "
+        className="flex-row flex  text-center md:text-6xl text-4xl mt-[30%] mx-auto ml-[40%] md:mt-[20%] font-bold text-red-600 "
       >
         <h1>N</h1>
         <motion.h1

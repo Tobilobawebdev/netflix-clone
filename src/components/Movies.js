@@ -32,7 +32,7 @@ function Movies({ movie }) {
     <div className="pl-6 relative w-[250px] ">
       <img
         className="max-w-[120px] h-[200px] block object-cover rounded-br-lg rounded-tl-lg"
-        src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`}
+        src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
         alt={movie.title}
       />
       <div onClick={saveShow} className="absolute bg-red-600 rounded-br-lg top-0 p-2 right-o text-white">
