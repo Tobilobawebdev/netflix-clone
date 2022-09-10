@@ -12,9 +12,9 @@ function SignUp() {
     e.preventDefault();
     try {
       await signUp(email, password);
-      navigate('/', { replace: true });
+      navigate('/')
     } catch (error) {
-      console.log(error.message);
+      console.log(error);
     }
   };
 
@@ -49,7 +49,7 @@ function SignUp() {
                 placeholder="Password"
                 autoComplete="current-password"
               />
-              <button type="button" className="bg-red-600 py-3 my-6 rounded font-bold">
+              <button type="submit" className="bg-red-600 py-3 my-6 rounded font-bold">
                 Sign Up
               </button>
               <div className="flex justify-between items-center text-sm text-gray-600">

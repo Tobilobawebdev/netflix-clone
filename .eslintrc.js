@@ -25,6 +25,7 @@ module.exports = {
   rules: {
     'import/extensions': 0,
     'react/prop-types': 0,
+    'react/jsx-indent': 0,
     'linebreak-style': 0,
     'react/state-in-constructor': 0,
     'import/prefer-default-export': 0,
