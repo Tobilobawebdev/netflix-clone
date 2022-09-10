@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { BiChevronDown } from 'react-icons/bi';
+import logo from '../fonts/netflix.svg'
 import { MdCastConnected } from 'react-icons/md';
 import { Link, useNavigate } from 'react-router-dom';
 import { UserAuth } from '../utils/AuthContext';
@@ -7,7 +7,7 @@ import { UserAuth } from '../utils/AuthContext';
 function Navbar() {
   const { user, logOut } = UserAuth();
   const [isScroll, setIsScroll] = useState('transparent');
-  const [textColor, setTextColor] = useState('#ff0000');
+  const [textColor, setTextColor] = useState('#000');
   const navigate = useNavigate();
   // console.log(user.email)
 
@@ -23,11 +23,11 @@ function Navbar() {
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY >= 90) {
-        setIsScroll('#ff0000');
+        setIsScroll('#000');
         setTextColor('#ffffff');
       } else {
         setIsScroll('transparent');
-        setTextColor('#ff0000');
+        setTextColor('#000');
       }
     };
     window.addEventListener('scroll', handleScroll);
@@ -37,7 +37,7 @@ function Navbar() {
     <div style={{ backgroundColor: `${isScroll}` }} className="justify-between py-1.5 flex fixed bg-transparent w-full items-center pl-3 z-[100]">
       <div className='flex cursor-pointer items-center space-x-4 '>
       <Link to="/">
-        <h1 style={{ color: `${textColor}` }} className="text-red-600 font-Beue font-black text-3xl lg:text-3xl">NETFLIX</h1>
+        <img src={logo} className='w-20 h-20 object-contain' alt='' />
       </Link>
 
       {/* middle navigation menu */}
