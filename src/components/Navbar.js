@@ -3,6 +3,7 @@ import { MdCastConnected } from 'react-icons/md';
 import { Link, useNavigate } from 'react-router-dom';
 import logo from '../fonts/netflix.svg';
 import { UserAuth } from '../utils/AuthContext';
+import img1 from '../fonts/img1.png';
 
 function Navbar() {
   const { user } = UserAuth();
@@ -45,10 +46,10 @@ function Navbar() {
       {/*  navigation profile section */}
       {user?.email ? (
         <div className="flex font-Beue space-x-3 pr-4 items-center">
+          <MdCastConnected size={25} />
           <Link to="/account">
-            <button type="button" className="text-white pr-4">Account</button>
+            <img src={img1} lt="" className="h-8 w-8 object-contain" />
           </Link>
-
         </div>
       ) : (
         <div className="flex font-Beue space-x-3 pr-4 items-center">
