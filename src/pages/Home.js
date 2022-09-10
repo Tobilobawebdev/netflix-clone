@@ -8,17 +8,10 @@ const Banner = React.lazy(() => import('../components/Banner'));
 const Row = React.lazy(() => import('../components/Row'));
 
 function Home() {
-  const [loaded, setLoaded] = useState(false);
 
-  useEffect(() => {
-    setTimeout(() => {
-      setLoaded(true);
-    }, 3000);
-  }, []);
   return (
     <div>
       <AnimatePresence exitBeforeEnter>
-        {loaded ? null : <Loader />}
       </AnimatePresence>
       <Suspense fallback={<div>loading...</div>}>
         <Banner />
