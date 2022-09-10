@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import logo from '../fonts/netflix.svg'
 import { MdCastConnected } from 'react-icons/md';
 import { Link, useNavigate } from 'react-router-dom';
+import logo from '../fonts/netflix.svg';
 import { UserAuth } from '../utils/AuthContext';
 
 function Navbar() {
@@ -35,26 +35,26 @@ function Navbar() {
 
   return (
     <div style={{ backgroundColor: `${isScroll}` }} className="justify-between py-1.5 flex fixed bg-transparent w-full items-center pl-3 z-[100]">
-      <div className='flex cursor-pointer items-center space-x-4 '>
-      <Link to="/">
-        <img src={logo} className='w-20 h-20 object-contain' alt='' />
-      </Link>
+      <div className="flex cursor-pointer items-center space-x-4 ">
+        <Link to="/">
+          <img src={logo} className="w-20 h-20 object-contain" alt="" />
+        </Link>
 
-      {/* middle navigation menu */}
-      <div className="text-sm  font-Beue font-semibold hidden lg:flex space-x-4 pl-6 ">
-        <p className="hover:text-red-600">Tv shows</p>
-        <p className="hover:text-red-600">Movies</p>
-        <p className="hover:text-red-600">Tv shows</p>
-        <p className="hover:text-red-600">Kids</p>
-        <p className="hover:text-red-600"> Categories</p>
+        {/* middle navigation menu */}
+        <div className="text-sm  font-Beue font-semibold hidden lg:flex space-x-4 pl-6 ">
+          <p className="hover:text-red-600">Tv shows</p>
+          <p className="hover:text-red-600">Movies</p>
+          <p className="hover:text-red-600">Tv shows</p>
+          <p className="hover:text-red-600">Kids</p>
+          <p className="hover:text-red-600"> Categories</p>
+        </div>
       </div>
-      </div>
-      
+
       {/* middle navigation menu end */}
 
       {/*  navigation profile section */}
       {user?.email ? (
-        <div className='flex font-Beue space-x-3 pr-4 items-center'>
+        <div className="flex font-Beue space-x-3 pr-4 items-center">
           <Link to="/account">
             <button type="button" className="text-white pr-4">Account</button>
           </Link>
@@ -67,7 +67,7 @@ function Navbar() {
           </button>
         </div>
       ) : (
-        <div className='flex font-Beue space-x-3 pr-4 items-center'>
+        <div className="flex font-Beue space-x-3 pr-4 items-center">
           <Link to="/signin">
             <button type="button" className="text-white pr-4">Sign In</button>
           </Link>

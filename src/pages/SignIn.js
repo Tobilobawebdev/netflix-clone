@@ -11,10 +11,10 @@ function SignIn() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setError('')
+    setError('');
     try {
       await logIn(email, password);
-      navigate("/")
+      navigate("/");
     } catch (error) {
       setError(error.message);
     }

@@ -12,7 +12,7 @@ function SignUp() {
     e.preventDefault();
     try {
       await signUp(email, password);
-      navigate('/')
+      navigate('/');
     } catch (error) {
       console.log(error);
     }
