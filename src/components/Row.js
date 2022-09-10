@@ -24,7 +24,7 @@ function Row({ title, rowID, fetchURL }) {
 
   return (
     <>
-      <h1 className="font-bold md:text-2xl text-xl m-3">{title}</h1>
+      <h1 className="font-bold font-Beue md:text-2xl text-xl m-3">{title}</h1>
       <div className="relative flex items-center group">
         <MdChevronLeft
           onClick={slideLeft}

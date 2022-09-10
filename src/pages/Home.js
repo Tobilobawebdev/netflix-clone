@@ -1,21 +1,14 @@
 import React, { Suspense, useState, useEffect } from 'react';
 import { AiOutlinePlayCircle, AiOutlinePlus, AiOutlineInfoCircle } from 'react-icons/ai';
-import { AnimatePresence } from 'framer-motion';
 import requests from '../utils/requests';
-import Loader from '../components/Loader';
-
-const Banner = React.lazy(() => import('../components/Banner'));
-const Row = React.lazy(() => import('../components/Row'));
+import Banner from '../components/Banner'
+import Row from '../components/Row'
 
 function Home() {
-
   return (
     <div>
-      <AnimatePresence exitBeforeEnter>
-      </AnimatePresence>
-      <Suspense fallback={<div>loading...</div>}>
         <Banner />
-        <div className="flex items-center justify-between lg:hidden p-6">
+        <div className="flex items-center font-Beue justify-between lg:hidden p-6">
           <button className="flex-col pr-4" type="button"><AiOutlineInfoCircle size={25} /> More Info</button>
           <button className="text-white font-bold flex items-center bg-red-600 px-5 py-2" type="button"><AiOutlinePlayCircle size={25} /> play</button>
           <button className="flex-col px-4" type="button"><AiOutlinePlus size={25} /> MyList</button>
@@ -44,7 +37,6 @@ function Home() {
         <div>
           <Row rowID="8" title="Documentaries" fetchURL={requests.fetchDocumentaries} />
         </div>
-      </Suspense>
     </div>
   );
 }

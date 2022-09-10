@@ -34,26 +34,27 @@ function Navbar() {
   }, []);
 
   return (
-    <div style={{ backgroundColor: `${isScroll}` }} className="justify-between flex fixed bg-transparent w-full items-center pl-3 z-[100]">
+    <div style={{ backgroundColor: `${isScroll}` }} className="justify-between py-1.5 flex fixed bg-transparent w-full items-center pl-3 z-[100]">
+      <div className='flex cursor-pointer items-center space-x-4 '>
       <Link to="/">
-        <h1 style={{ color: `${textColor}` }} className="text-red-600 font-black text-4xl lg:text-3xl">N</h1>
+        <h1 style={{ color: `${textColor}` }} className="text-red-600 font-Beue font-black text-3xl lg:text-3xl">NETFLIX</h1>
       </Link>
 
       {/* middle navigation menu */}
-      <div className="text-sm hidden lg:flex space-x-6 pr-6 ">
-        <p className="hover:text-blue-600">Tv shows</p>
-        <p className="hover:text-blue-600">Movies</p>
-        <p className="hover:text-blue-600 flex bg-transparent">
-          Categories
-          <BiChevronDown />
-        </p>
-
+      <div className="text-sm  font-Beue font-semibold hidden lg:flex space-x-4 pl-6 ">
+        <p className="hover:text-red-600">Tv shows</p>
+        <p className="hover:text-red-600">Movies</p>
+        <p className="hover:text-red-600">Tv shows</p>
+        <p className="hover:text-red-600">Kids</p>
+        <p className="hover:text-red-600"> Categories</p>
       </div>
+      </div>
+      
       {/* middle navigation menu end */}
 
       {/*  navigation profile section */}
       {user?.email ? (
-        <div>
+        <div className='flex font-Beue space-x-3 pr-4 items-center'>
           <Link to="/account">
             <button type="button" className="text-white pr-4">Account</button>
           </Link>
@@ -66,12 +67,12 @@ function Navbar() {
           </button>
         </div>
       ) : (
-        <div>
+        <div className='flex font-Beue space-x-3 pr-4 items-center'>
           <Link to="/signin">
             <button type="button" className="text-white pr-4">Sign In</button>
           </Link>
           <Link to="/signup">
-            <button type="button" className="bg-red-600 px-6 py-2 rounded cursor-pointer text-white">
+            <button type="button" className="bg-red-600 px-3 py-0.5 rounded-full cursor-pointer text-white">
               Sign Up
             </button>
           </Link>
