@@ -5,20 +5,10 @@ import logo from '../fonts/netflix.svg';
 import { UserAuth } from '../utils/AuthContext';
 
 function Navbar() {
-  const { user, logOut } = UserAuth();
+  const { user } = UserAuth();
   const [isScroll, setIsScroll] = useState('transparent');
   const [textColor, setTextColor] = useState('#000');
-  const navigate = useNavigate();
   // console.log(user.email)
-
-  const handleLogout = async () => {
-    try {
-      await logOut();
-      navigate('/');
-    } catch (error) {
-      console.log(error);
-    }
-  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -58,13 +48,7 @@ function Navbar() {
           <Link to="/account">
             <button type="button" className="text-white pr-4">Account</button>
           </Link>
-          <button
-            type="button"
-            onClick={handleLogout}
-            className="bg-red-600 px-6 py-2 rounded cursor-pointer text-white"
-          >
-            Logout
-          </button>
+
         </div>
       ) : (
         <div className="flex font-Beue space-x-3 pr-4 items-center">
