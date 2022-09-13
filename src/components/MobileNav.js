@@ -1,6 +1,6 @@
-import React from 'react';
-import { AiOutlineHome, AiOutlineSearch } from 'react-icons/ai';
-import { MdOutlineExplore, MdFileDownload } from 'react-icons/md';
+import React from "react";
+import { AiOutlineHome, AiOutlineSearch } from "react-icons/ai";
+import { MdOutlineExplore, MdFileDownload } from "react-icons/md";
 
 function MobileNav() {
   return (
