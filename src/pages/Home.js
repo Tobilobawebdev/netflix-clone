@@ -8,7 +8,7 @@ function Home() {
   return (
     <div>
       <Banner />
-      <div className="flex  mt-20 bg-transparent left-10 text-lg font-Beue font-bold absolute top-8 md:hidden space-x-5 justify-between">
+      <div className="flex  mt-20 bg-transparent left-10 text-lg font-Beue font-bold absolute top-8 md:hidden space-x-16 justify-between">
         <span>Tv Shows</span>
         <span>Movies</span>
         <span>Categories</span>
